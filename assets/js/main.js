@@ -63,14 +63,14 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
 const contactForm = document.getElementById('contact-form'),
     contactName = document.getElementById('contact-name'),
     contactEmail = document.getElementById('contact-email'),
-    contactProject = document.getElementById('contact-project'),
+    contactWords = document.getElementById('contact-words'),
     contactMessage = document.getElementById('contact-message')
       
 const sendEmail = (e) => {
     e.preventDefault()
 
     //Check if the field has a value
-    if (contactName.value === ''|| contactEmail.value === ''||contactProject.value === '') {
+    if (contactName.value === ''|| contactEmail.value === ''||contactWords.value === '') {
         //Add and remove color
         contactMessage.classList.remove('color-blue')
         contactMessage.classList.add('color-red')
@@ -96,7 +96,7 @@ const sendEmail = (e) => {
         //TO clear the input field
         contactName.value =''
         contactEmail.value = ''
-        contactProject.value=''
+        contactWords.value=''
     }
 }
 contactForm.addEventListener('submit',sendEmail)    
